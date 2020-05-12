@@ -2,6 +2,7 @@
 
 buildscript {
     repositories {
+        mavenLocal()
         google()
         jcenter()
     }
@@ -18,10 +19,16 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenLocal()
+        mavenCentral()
         jcenter()
         maven {
-            url "http://bizancio:7080/nexus/content/repositories/snapshots/"
+            url 'https://github.com/rosjava/rosjava_mvn_repo/raw/master'
         }
+
+//        maven {
+//            url "http://10.113.36.11:7080/nexus/content/repositories/snapshots/"
+//        }
         google()
     }
 
